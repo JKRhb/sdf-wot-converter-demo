@@ -1,0 +1,11 @@
+[package]
+name = "sdf-wot-converter-demo"
+authors = ["Jan Romann <jan.romann@uni-bremen.de>"]
+version = "0.1.0"
+edition = "2018"
+license = "MIT"
+repository = "https://github.com/JKRhb/sdf-wot-converter-demo"
+
+
+[dependencies]
+rocket = "0.5.0-rc"
