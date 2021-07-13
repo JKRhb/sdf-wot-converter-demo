@@ -162,9 +162,9 @@ checksum = "b700ce4376041dcd0a327fd0097c41095743c4c8af8887265942faf1100bd040"
 
 [[package]]
 name = "cc"
-version = "1.0.68"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a72c244c1ff497a746a7e1fb3d14bd08420ecda70c8f25c7112f2781652d787"
+checksum = "e70cc2f62c6ce1868963827bd677764c62d07c3d9a3e1fb1177ee1a9ab199eb2"
 
 [[package]]
 name = "cfg-if"
@@ -1487,7 +1487,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git#140cbb4bbcf1ddba97d2e83c9d48160466304e43"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#090b817570cf18d5c308abbcd5531703bca0a9a6"
 dependencies = [
  "assert-json-diff",
  "chrono",
