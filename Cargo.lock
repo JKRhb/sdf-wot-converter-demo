@@ -1487,7 +1487,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#090b817570cf18d5c308abbcd5531703bca0a9a6"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#c3b81bc9ee5092f9152d9fc4cbff44f82fdb6626"
 dependencies = [
  "assert-json-diff",
  "chrono",
@@ -1776,9 +1776,9 @@ dependencies = [
 
 [[package]]
 name = "tera"
-version = "1.12.0"
+version = "1.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7571541dff0e57eaa2e931249f0d7489eb2b24b6b105546f8c2f1a47f15aaa3a"
+checksum = "bf95b0d8a46da5fe3ea119394a6c7f1e745f9de359081641c99946e2bf55d4f2"
 dependencies = [
  "chrono",
  "chrono-tz",
