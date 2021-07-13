@@ -60,7 +60,7 @@
               <div>
                 {{
                   m::textarea(
-                      label="WoT input",
+                      label="WoT output",
                       name="input2",
                       placeholder="A WoT model",
                       value=input2
