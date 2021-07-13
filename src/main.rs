@@ -39,7 +39,7 @@ fn submit(form: Form<Contextual<UserInput>>) -> (Status, Template) {
                 Ok(result) => {
                     wot_output = result;
                     error = String::new();
-                },
+                }
                 Err(err) => {
                     wot_output = submission.input2.clone();
                     error = err.to_string();
