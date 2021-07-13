@@ -15,6 +15,13 @@ struct UserInput {
     input2: String,
 }
 
+#[derive(FromForm, Debug, Serialize)]
+struct Output {
+    input1: String,
+    input2: String,
+    error: String,
+}
+
 #[get("/")]
 fn index() -> Template {
     Template::render("index", &Context::default())
@@ -26,11 +33,22 @@ fn submit(form: Form<Contextual<UserInput>>) -> (Status, Template) {
         Some(ref submission) => {
             println!("submission: {:#?}", submission);
             let sdf_input = submission.input1.clone();
-            let wot_output = converter::convert_sdf_to_wot_tm(sdf_input.clone())
-                .unwrap_or_else(|_| "Conversion failed.".to_string()); // TODO: Implement better error handling.
-            let output = UserInput {
+            let wot_output: String;
+            let error: String;
+            match converter::convert_sdf_to_wot_tm(sdf_input.clone()) {
+                Ok(result) => {
+                    wot_output = result;
+                    error = String::new();
+                },
+                Err(err) => {
+                    wot_output = submission.input2.clone();
+                    error = err.to_string();
+                }
+            }
+            let output = Output {
                 input1: sdf_input,
                 input2: wot_output,
+                error,
             };
             Template::render("index", &output)
         }
