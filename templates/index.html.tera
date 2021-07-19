@@ -20,6 +20,15 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .model-type-select {
+      width: initial;
+    }
   </style>
 {% endblock %}
 
@@ -42,9 +51,15 @@
 
         <section class="grid">
           <div>
+            <div class="flex">
+              <select class="model-type-select" name="input1_type" id="input1_type">
+                <option value="Sdf">SDF</option>
+                <option value="WoTTM">WoT TM</option>
+              </select>
+              <input class="button" type="submit" name="submit_input1" value="­»">
+            </div>
             {{
               m::textarea(
-                  label="SDF input",
                   name="input1",
                   placeholder="An SDF model",
                   value=input1
@@ -53,9 +68,15 @@
           </div>
 
           <div>
+            <div class="flex">
+              <input class="button" type="submit" name="submit_input2" value="­«">
+              <select class="model-type-select" name="input2_type" id="input2_type">
+                <option value="WoTTM">WoT TM</option>
+                <option value="Sdf">SDF</option>
+              </select>
+            </div>
             {{
               m::textarea(
-                  label="WoT output",
                   name="input2",
                   placeholder="A WoT model",
                   value=input2
@@ -65,6 +86,7 @@
         </section>
         <br>
         <button type="reset">Reset input</button>
-        <button type="submit">Submit input</button>
+        {# <button type="submit">Submit input</button> #}
+        <input class="button" type="submit" name="to_sdf" value="WoT TM to SDF">
     </form>
 {% endblock %}
