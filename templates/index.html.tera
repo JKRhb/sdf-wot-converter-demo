@@ -86,7 +86,5 @@
         </section>
         <br>
         <button type="reset">Reset input</button>
-        {# <button type="submit">Submit input</button> #}
-        <input class="button" type="submit" name="to_sdf" value="WoT TM to SDF">
     </form>
 {% endblock %}
