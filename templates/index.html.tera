@@ -1,79 +1,70 @@
+{% extends "base" %}
+
 {% import "macros" as m %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Converter between the Semantic Definition Format (SDF) and Web of Things (WoT) definitions.">
-        <meta name="keywords" content="converter, SDF, WoT, Semantic Definition Format, Web of Things, IoT, Internet of Things,">
-        <meta name="author" content="Jan Romann, jan.romann@uni-bremen.de">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SDF WoT converter</title>
-        <link rel="stylesheet" href="/chota.min.css">
-        <style>
-          .container {
-            --grid-maxWidth: 100%;
-            margin: 0 auto;
-            padding: 20px 10px;
-          }
+{% block styles %}
+  <style>
+    .container {
+      --grid-maxWidth: 100%;
+      margin: 0 auto;
+      padding: 20px 10px;
+    }
 
-          textarea {
-            height: 78vh;
-            font-size: 0.8em;
-            font-family: var(--font-family-mono);
-          }
+    textarea {
+      height: 78vh;
+      font-size: 0.8em;
+      font-family: var(--font-family-mono);
+    }
 
-          .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-          }
-        </style>
-    </head>
-    <body>
-      <div class="container">
-        <h1>SDF WoT converter</h1>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+  </style>
+{% endblock %}
 
-        {% if error %} 
-          <p class="card text-error">
-            Error: {{ error }}
-          </p>
+{% block content %}
+    <h1>SDF WoT converter</h1>
+
+    {% if error %} 
+      <p class="card text-error">
+        Error: {{ error }}
+      </p>
+    {% endif %}
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        {% if not input1 %} 
+          {% set input1 = "" %}
+        {% endif %}
+        {% if not input2 %} 
+          {% set input2 = "" %}
         {% endif %}
 
-        <form action="/" method="post" enctype="multipart/form-data">
-            {% if not input1 %} 
-              {% set input1 = "" %}
-            {% endif %}
-            {% if not input2 %} 
-              {% set input2 = "" %}
-            {% endif %}
+        <section class="grid">
+          <div>
+            {{
+              m::textarea(
+                  label="SDF input",
+                  name="input1",
+                  placeholder="An SDF model",
+                  value=input1
+              )
+            }}
+          </div>
 
-            <section class="grid">
-              <div>
-                {{
-                  m::textarea(
-                      label="SDF input",
-                      name="input1",
-                      placeholder="An SDF model",
-                      value=input1
-                  )
-                }}
-              </div>
-
-              <div>
-                {{
-                  m::textarea(
-                      label="WoT output",
-                      name="input2",
-                      placeholder="A WoT model",
-                      value=input2
-                  )
-                }}
-              </div>
-            </section>
-            <br>
-            <button type="reset">Reset input</button>
-            <button type="submit">Submit input</button>
-        </form>
-    </body>
-</html>
+          <div>
+            {{
+              m::textarea(
+                  label="WoT output",
+                  name="input2",
+                  placeholder="A WoT model",
+                  value=input2
+              )
+            }}
+          </div>
+        </section>
+        <br>
+        <button type="reset">Reset input</button>
+        <button type="submit">Submit input</button>
+    </form>
+{% endblock %}

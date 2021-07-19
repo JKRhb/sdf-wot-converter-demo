@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Converter between the Semantic Definition Format (SDF) and Web of Things (WoT) definitions.">
+        <meta name="keywords" content="converter, SDF, WoT, Semantic Definition Format, Web of Things, IoT, Internet of Things,">
+        <meta name="author" content="Jan Romann, jan.romann@uni-bremen.de">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SDF WoT converter {% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="/chota.min.css">
+        {% block styles %}{% endblock styles %}
+    </head>
+    <body>
+      <div class="container">
+          {% block content %}{% endblock content %}
+      </div>
+  </body>
+</html>
