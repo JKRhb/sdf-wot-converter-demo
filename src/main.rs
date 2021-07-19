@@ -110,7 +110,7 @@ fn submit(form: Form<Contextual<UserInput>>) -> (Status, Template) {
                         output = input.clone();
                         error = String::new();
                     }
-                }
+                },
             }
 
             match direction {
