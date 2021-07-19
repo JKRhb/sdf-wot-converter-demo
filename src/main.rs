@@ -4,8 +4,10 @@ extern crate rocket;
 use rocket::form::{Context, Contextual, Form, FromForm};
 use rocket::fs::{relative, FileServer};
 use rocket::http::Status;
+use rocket::Request;
 use sdf_wot_converter::converter;
 use serde::Serialize;
+use std::collections::HashMap;
 
 use rocket_dyn_templates::Template;
 
@@ -58,10 +60,18 @@ fn submit(form: Form<Contextual<UserInput>>) -> (Status, Template) {
     (form.context.status(), template)
 }
 
+#[catch(404)]
+pub fn not_found(req: &Request<'_>) -> Template {
+    let mut context = HashMap::new();
+    context.insert("uri", req.uri());
+    Template::render("error/404", context)
+}
+
 #[rocket::launch]
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index, submit])
         .attach(Template::fairing())
         .mount("/", FileServer::from(relative!("/static")))
+        .register("/", catchers![not_found])
 }
