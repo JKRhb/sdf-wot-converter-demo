@@ -1653,7 +1653,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#7aeda5ec0928e213c898cf44b1d95535c2438b5d"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#384d4b4945f474829f277b6d7969a4c3ac66b986"
 dependencies = [
  "assert-json-diff",
  "chrono",
@@ -1663,6 +1663,7 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
+ "serde_variant",
  "serde_with",
  "url",
 ]
@@ -1773,6 +1774,15 @@ dependencies = [
  "form_urlencoded",
  "itoa",
  "ryu",
+ "serde",
+]
+
+[[package]]
+name = "serde_variant"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "60c53d80400dbb87d4b422c3396145fa5736b13ebfed5c62105b7dc8d1cba5cf"
+dependencies = [
  "serde",
 ]
 
