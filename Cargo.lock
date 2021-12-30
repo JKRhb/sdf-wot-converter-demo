@@ -1477,9 +1477,9 @@ dependencies = [
 
 [[package]]
 name = "reqwest"
-version = "0.11.7"
+version = "0.11.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07bea77bc708afa10e59905c3d4af7c8fd43c9214251673095ff8b14345fcbc5"
+checksum = "7c4e0a76dc12a116108933f6301b95e83634e0c47b0afbed6abbaa0601e99258"
 dependencies = [
  "base64",
  "bytes",
@@ -1671,7 +1671,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#9b39b8668b73b17a8ef13315712ed1ad9f4f976f"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#b6f96daa87085b67c20e0257b0a0258635073565"
 dependencies = [
  "assert-json-diff",
  "chrono",
