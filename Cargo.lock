@@ -228,9 +228,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "3.0.10"
+version = "3.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a30c3bf9ff12dfe5dae53f0a96e0febcd18420d1c0e7fad77796d9d5c4b5375"
+checksum = "2afefa54b5c7dd40918dc1e09f213a171ab5937aadccab45e804780b238f9f43"
 dependencies = [
  "atty",
  "bitflags",
@@ -1673,7 +1673,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#d41da90065bc05beede5a2d26196a5abeea9289a"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#97f4dd93ab5ee9d7798b7cac4119b9356c579c26"
 dependencies = [
  "assert-json-diff",
  "chrono",
