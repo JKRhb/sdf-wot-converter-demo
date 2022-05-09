@@ -8,7 +8,7 @@ repository = "https://github.com/JKRhb/sdf-wot-converter-demo"
 
 
 [dependencies]
-rocket = "0.5.0-rc"
+rocket = "0.5.0-rc.2"
 sdf-wot-converter = {git = "https://github.com/JKRhb/sdf-wot-converter.git", branch = "main"}
 serde = "1.0.136"
 
