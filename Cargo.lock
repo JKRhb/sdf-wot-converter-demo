@@ -1771,7 +1771,7 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 [[package]]
 name = "sdf-wot-converter"
 version = "0.1.0"
-source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#70ae41f02f3c70004c8f7f88a56ba0c1c510d88d"
+source = "git+https://github.com/JKRhb/sdf-wot-converter.git?branch=main#e097215442b6a439c96d3f24f5f1868d79c512e3"
 dependencies = [
  "assert-json-diff",
  "chrono",
