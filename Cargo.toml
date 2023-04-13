@@ -13,5 +13,5 @@ sdf-wot-converter = {git = "https://github.com/JKRhb/sdf-wot-converter.git", bra
 serde = "1.0.160"
 
 [dependencies.rocket_dyn_templates]
-version = "0.1.0-rc.2"
+version = "0.1.0-rc.3"
 features = ["tera"]
